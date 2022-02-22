@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/common_top_bar"
+        layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:id="@+id/Layout_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_linear"
+        android:layout_below="@+id/common_top_bar"
+        android:gravity="center"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/typeface_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_bottom_linear"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/moren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textColor="@color/dodger_blue"
+            android:text="默认字体"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/caoshu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textColor="@color/dodger_blue"
+            android:text="草书"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/guifanzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:textColor="@color/dodger_blue"
+            android:text="规范字"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/dodger_blue"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/text_color"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:text="更改颜色"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/text_typeface"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:text="更改字体"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/addtext"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:text="添加文字"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+   <include
+        android:id="@+id/common_top_bar"
+        layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_top_bar"
+        android:layout_above="@+id/filtersSV"
+        >
+
+        <ImageView
+            android:id="@+id/picture_filter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" >
+
+            <com.view.VerticalSeekBar
+                android:id="@+id/verticalSeekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:max="100"
+                android:maxWidth="50dp"
+                android:minWidth="50dp"
+                android:progress="2" />
+
+            <TextView
+                android:id="@+id/verticalSeekBarProgressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verticalSeekBar"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="10%"
+                android:textColor="#177d55" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:scrollbars="none"
+        android:background="@color/dodger_blue"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/filterWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="5dp"
+                android:drawableTop="@drawable/button_filter"
+                android:text="美白滤镜"
+                android:textColor="#FFFFFF" />
+            
+            <TextView
+                android:id="@+id/filterGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:drawableTop="@drawable/button_filter"
+                android:text="灰色滤镜"
+                android:textColor="#FFFFFF" />
+            
+            <TextView
+                android:id="@+id/filterNostalgic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:drawableTop="@drawable/button_filter"
+                android:text="怀旧风格"
+                android:textColor="#FFFFFF" />
+            
+            <TextView
+                android:id="@+id/filterComic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:drawableTop="@drawable/button_filter"
+                android:text="漫画风格"
+                android:textColor="#FFFFFF" />
+         
+            <TextView
+                android:id="@+id/filterBlackWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:drawableTop="@drawable/button_filter"
+                android:text="黑白滤镜"
+                android:textColor="#FFFFFF" />
+       
+            <TextView
+                android:id="@+id/filterNegative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:drawableTop="@drawable/button_filter"
+                android:text="反色效果"
+                android:textColor="#FFFFFF" />
+            
+            <TextView
+                android:id="@+id/filterSketch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:drawableTop="@drawable/button_filter"
+                android:text="素描铅笔"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
